@@ -48,6 +48,10 @@ jobs:
       - run:
           name: lerna init
           command: lerna init
+          
+      - run:
+          name: Install mocha
+          command: npm install --global mocha
 
       - run:
           name: Clear Cached Dependencies
