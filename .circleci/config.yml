@@ -46,8 +46,8 @@ jobs:
           command: npm install --global lerna
           
       - run:
-          name: lerna init
-          command: lerna init
+          name: Install mocha
+          command: npm install react-scripts-ts
           
       - run:
           name: Install mocha
