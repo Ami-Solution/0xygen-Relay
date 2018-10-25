@@ -42,5 +42,17 @@ jobs:
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
                  
       - run:
+          name: Install Lerna
+          command: npm install --global lerna
+          
+      - run:
+          name: lerna init
+          command: lerna init
+
+      - run:
+          name: Clear Cached Dependencies
+          command: lerna clean --yes
+          
+      - run:
           name: Test Packages
-          command: lerna test
+          command: lerna run test
